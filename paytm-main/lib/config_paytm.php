@@ -8,11 +8,11 @@
 - Above details will be different for testing and production environment.
 
 */
-define('PAYTM_ENVIRONMENT', 'TEST'); // PROD
-define('PAYTM_MERCHANT_KEY', 'szOjYs785a0o_Y5n'); //Change this constant's value with Merchant key downloaded from portal
-define('PAYTM_MERCHANT_MID', 'YaGScK37959158841413'); //Change this constant's value with MID (Merchant ID) received from Paytm
-define('PAYTM_MERCHANT_WEBSITE', 'WEBSTAGING'); //Change this constant's value with Website name received from Paytm
-define('CALLBACK_URL', 'https://sharmahimanshu.in/foodie/paytm-main/pgResponse.php'); //use your website url where paytm return payment response like this -> http://your_website_url/how-to-integrate-paytm-payment-gateway-in-php-with-demo-download/TxnStatus.php"
+define('PAYTM_ENVIRONMENT', '********'); // PROD
+define('PAYTM_MERCHANT_KEY', '*************'); //Change this constant's value with Merchant key downloaded from portal
+define('PAYTM_MERCHANT_MID', '******************'); //Change this constant's value with MID (Merchant ID) received from Paytm
+define('PAYTM_MERCHANT_WEBSITE', '***********'); //Change this constant's value with Website name received from Paytm
+define('CALLBACK_URL', '*******************'); //use your website url where paytm return payment response like this -> http://your_website_url/how-to-integrate-paytm-payment-gateway-in-php-with-demo-download/TxnStatus.php"
 
 
 /*$PAYTM_DOMAIN = "pguat.paytm.com";
