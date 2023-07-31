@@ -1,0 +1,237 @@
+.usercontainer .maincontainer .smalldiv .ordersdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .div{
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #555;
+    border-radius: 7px;
+    flex-direction: column;
+    margin: 10px 15px;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .div .itemname{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .div .itemname img{
+    width: 200px;
+    height: 120px;
+    border-radius: 7px;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .div .itemname .title p{
+    font-size: 18px;
+    color: #555;
+    margin: 10px;
+    display: flex;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .div .btndiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .div .btndiv .btn{
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    background: #EE3D4A;
+    box-shadow: 1px 1px 30px #ee3d4949;
+    margin: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .noorder img{
+    width: 200px;
+}
+.usercontainer .maincontainer .smalldiv .ordersdiv .noorder p{
+    font-size: 25px;
+    color: #555;
+    margin: 10px auto;
+}
+/*--------------------------------------update details div-----------------*/
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 10px;
+    overflow: auto;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form{
+    width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    padding-left: 10px;
+    color: #555;
+    background: none;
+    margin: 5px auto;
+    font-size: 18px;
+    outline: none;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form .img{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 5px auto;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form .img .imgdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form .img .imgdiv input{
+    border: none;
+    height: auto;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form .img .imgdiv img{
+    width: 60px;
+    border-radius: 7px;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form .img .imgdiv input::-webkit-file-upload-button{
+    width: 120px;
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    color: #555;
+    background: none;
+    font-size: 18px;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form textarea{
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 5px auto;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+.usercontainer .maincontainer .smalldiv .updatedetailsdiv form .btn{
+    border: none;
+    background: #EE3D4A;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 1px 1px 30px #ee3d4949;
+}
+/*-----------------------------------------change pass div--------------------*/
+.usercontainer .maincontainer .smalldiv .changepassdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.usercontainer .maincontainer .smalldiv .changepassdiv form{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.usercontainer .maincontainer .smalldiv .changepassdiv form input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    padding-left: 10px;
+    color: #555;
+    background: none;
+    margin: 5px auto;
+    font-size: 18px;
+    outline: none;
+}
+.usercontainer .maincontainer .smalldiv .changepassdiv form .btn{
+    border: none;
+    background: #EE3D4A;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 1px 1px 30px #ee3d4949;
+}
+/*------------------------------------------responsive css-------------------*/
+@media(max-width:1100px){
+    .usercontainer .maincontainer .smalldiv .updatedetailsdiv form{
+        width: 100%;
+    }
+}
+
+@media(max-width:600px){
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div{
+        width: 100%;
+    }
+    .usercontainer .maincontainer .smalldiv .changepassdiv form{
+        width: 100%;
+    }
+}
+@media(max-width:520px){
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div .itemname{
+        flex-direction: column;
+    }
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div .itemname img{
+        width: 100%;
+        height: 50%;
+    }
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div .btndiv{
+        width:100%;
+        flex-direction: column;
+    }
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div .btndiv .btn{
+        width: 100%;
+        margin: 5px auto;
+    }
+}
+/* @media(max-width:400px){
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div .btndiv{
+        flex-direction: column;
+    }
+    .usercontainer .maincontainer .smalldiv .ordersdiv .div .btndiv .btn{
+        width: 100%;
+        margin: 5px auto;
+    }
+} */

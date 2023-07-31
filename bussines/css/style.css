@@ -1,0 +1,1180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: /*#1F2024*/#22252E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+   display: none;
+}
+/*::-webkit-scrollbar-track{
+    background: #fff;+
+    background: -webkit-linear-gradient(45deg, #1d3ede, #01e6f8);
+    background: -ms-linear-gradient(45deg, #1d3ede, #01e6f8);
+    background: -moz-linear-gradient(45deg, #1d3ede, #01e6f8);
+    background: -o-linear-gradient(45deg, #1d3ede, #01e6f8);
+}*/
+/*---------------------------------------main div---------------------------------------------*/
+.maindiv{
+    width: 99vw;
+    height: 98vh;
+    margin:1vh auto;
+    border-radius: 7px;
+    background:#e8e8e8;
+    overflow: auto;
+    padding: 0;
+}
+.notification{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position:fixed;
+    top: 1vh;
+    left: 1vw;
+    flex-direction: column;
+    animation: slide 1s ease-in-out 1;
+    margin: auto;
+    z-index: 999999999;
+    transition: .6s ease-in-out;
+}
+.notification .error{
+    width: 100%;
+    padding: 10px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px auto;
+}
+.notification .success{
+    width: 100%;
+    padding: 10px;
+    background: #52ee3d;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px auto;
+}
+@keyframes slide{
+    0%{
+        top: -20vh;
+    }
+    100%{
+        top: 1vh;
+    }
+}
+/*-------------------------------------------------------nav---------------------------------------*/
+
+.navdiv .nav{
+    width: 1100px;
+    height: 80px;
+    background: #fff;
+    margin: 20px auto;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+.navdiv .nav nav{
+    max-width: 1100px;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+    padding: 0 20px;
+}
+.navdiv .nav nav .title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.navdiv .nav nav .title a{
+    font-size: 40px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.navdiv .nav nav .title p{
+    font-size: 20px;
+    color: #EE3D4A;
+    font-weight: normal;
+}
+.navdiv .nav nav .btndiv{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.navdiv .nav nav .btndiv .loginbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.navdiv .nav nav .btndiv .loginbtn img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #EE3D4A;
+}
+.navdiv .nav nav .btndiv .accbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #EE3D4A;
+    font-size: 40px;
+}
+.line{
+    font-size: 30px;
+    color: #EE3D4A;
+    font-weight: normal;
+    margin: auto 10px;
+}
+.fixed{
+    position: fixed;
+    top: 1vh;
+    margin:0 !important;
+    width: 99vw !important;
+    z-index: 9999;
+}
+
+/*-----------------------------------------------why you should partner*/
+.smalldiv{
+    width: 1100px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+}
+.smalldiv .title{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.smalldiv .title h2{
+    padding: 10px;
+    font-size: 40px;
+    color: #555;
+}
+.smalldiv .title p{
+    font-size: 22px;
+    padding: 10px;
+    color: #777;
+}
+.smalldiv .btndiv{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+.smalldiv .btndiv .regbtn{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    height: 50px;
+    background: #EE3D4A;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 25px;
+    box-shadow: 5px 5px 30px #ee3d4928;
+}
+.smalldiv .btndiv .listbtn{
+    width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    height: 50px;
+    background: #fff;
+    color: #EE3D4A;
+    border: 2px solid #EE3D4A;
+    border-radius: 7px;
+    font-size: 25px;
+    box-shadow: 5px 5px 30px #ee3d4928;
+}
+.smalldiv .whydiv{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.smalldiv .whydiv h2{
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    color: #555;
+}
+.smalldiv .whydiv p{
+    width: 70%;
+    font-size: 20px;
+    color: #777;
+}
+.smalldiv .whydiv .carddiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.smalldiv .whydiv .carddiv .card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+}
+.smalldiv .whydiv .carddiv .card img{
+    width: 90px;
+    height: 90px;
+}
+.smalldiv .whydiv .carddiv .card .title h2{
+    font-size: 25px;
+    font-weight: normal;
+    padding: 0;
+}
+.smalldiv .whydiv .carddiv .card .title p{
+    width: 180px;
+    padding: 0;
+}
+
+/*--------------------------------------how it works--------------------------*/
+
+.smalldiv .howdiv p{
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    color: #555;
+    font-weight: bold;
+}
+.smalldiv .howdiv .carddiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.smalldiv .howdiv .carddiv .card{
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    flex-direction: column;
+}
+.smalldiv .howdiv .carddiv .card img{
+    width: 100px;
+    height: 100px;
+}
+.smalldiv .howdiv .carddiv .card h2{
+    font-size: 25px;
+    color: #555;
+    padding: 10px;
+}
+.smalldiv .howdiv .carddiv .card h4{
+    font-size: 20px;
+    color: #555;
+    padding-top: 10px;
+}
+.smalldiv .howdiv .carddiv .card p{
+    font-size: 18px;
+    color: #777;
+    font-weight: normal;
+}
+.card{
+    transition: ease-in-out .6s;
+}
+.card:hover{
+    transform: translatey(-4px);
+}
+
+/*-----------------------------------------------------------login form--------------------------------------------- */
+.formcontainer{
+    width: 99vw;
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+}
+.formdiv{
+    width: 1100px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.formdiv .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.formdiv .title a{
+    font-size: 40px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.formdiv .title p{
+    font-size: 30px;
+    color: #EE3D4A;
+}
+.formdiv .title i{
+    font-size: 35px;
+    color: #555;
+    cursor: pointer;
+}
+.formdiv .col{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.formdiv .col img{
+    width: calc(100% - 410px);
+    border-radius: 10px;
+    height: 350px;
+}
+.formdiv .col form{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.formdiv .col form .username,
+.formdiv .col form .password{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin: 10px auto;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #555;
+    border-radius: 7px;
+    padding:0 10px;
+}
+.formdiv .col form .username i,
+.formdiv .col form .password i{
+    font-size: 24px;
+    color: #555;
+}
+.formdiv .col form .username input{
+    height: 100%;
+    width: 92%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    color: #555;
+}
+.formdiv .col form input::placeholder{
+    color: #555;
+}
+#hidePass{
+    display: none;
+}
+.formdiv .col form .password input{
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    color: #555;
+} 
+.formdiv .col form .loginbtn{
+    width: 90%;
+    height:50px;
+    border: none;
+    background: #EE3D4A;
+    border-radius: 7px;
+    margin: 10px auto;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    box-shadow: 1px 1px 30px #ee3d4942;
+}
+.formdiv .col form p{
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 10px auto;
+    width: 90%;
+}
+.formdiv .col form p a{
+    color: #EE3D4A;
+    padding-left: 10px;
+}
+/*--------------------------------------------------sign up-----------------------------------------------*/
+
+
+.signupformcontainer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.signupformcontainer .nav{
+    width: 1000px;
+    height: 70px !important;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+.signupformcontainer .nav .title a{
+    font-size: 35px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.signupformcontainer .nav .title p{
+    font-size: 18px;
+    color: #EE3D4A;
+}
+.signupformcontainer .nav .btn{
+    width: 120px;
+    height: 45px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    margin-right: 20px;
+    box-shadow: 1px 1px 20px #ee3d4948;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.signupformcontainer .signupformdiv .formdiv{
+    width: auto;
+    background: none;
+    box-shadow: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.signupformcontainer .signupformdiv .formdiv form{
+    width: 1000px;
+    margin: 10px auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+.signupformcontainer .signupformdiv .formdiv form .col{
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div,
+.signupformcontainer .signupformdiv .formdiv form .col .password{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid #555;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div input{
+    width: 95%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div i,
+.signupformcontainer .signupformdiv .formdiv form .col .password i,
+.signupformcontainer .signupformdiv .formdiv form .col .address i{
+    font-size: 20px;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .password input{
+    width: 93%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .address{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    border-radius: 7px;
+    border: 1px solid #555;
+    margin: 10px auto;
+    padding: 10px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .address textarea{
+    width: 94%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .btndiv{
+    width: 100%;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .btndiv .btn{
+    width: 100%;
+    height: 50px;
+    background: #EE3D4A;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 5px 5px 20px #ee3d494d;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 10px auto;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img p{
+    font-size: 18px;
+    padding: 10px 0;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img p i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img input::-webkit-file-upload-button{
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    background: #fff;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv p{
+    font-size: 20px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv p a{
+    color: #EE3D4A;
+    margin-left: 5px;
+}
+
+/*-------------------------------------restaurant search div--------------------------------------*/
+.smalldiv .searchdiv{
+    width: 100%;
+    padding: 10px;
+}
+.smalldiv .searchdiv h1{
+    color: #555;
+    padding: 10px;
+}
+.smalldiv .searchdiv p{
+    font-size: 20px;
+    color: #777;
+}
+.smalldiv .searchdiv form{
+    width: 100%;
+    padding: 10px;
+}
+.smalldiv .searchdiv form .search{
+    width: 700px;
+    height: 50px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 10px;
+    margin: 10px auto;
+    border: 1px solid #555;
+}
+.smalldiv .searchdiv form .search i{
+    font-size: 25px;
+    color: #555;
+}
+.smalldiv .searchdiv form .search input{
+    height: 100%;
+    font-size: 18px;
+    width: 96%;
+    border: none;
+    outline: none;
+    color: #555;
+    padding-left: 10px;
+}
+
+/*--------------------------------register your restaurant-----------------*/
+.smalldiv .regformdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.smalldiv .regformdiv h1{
+    padding: 10px;
+    color: #555;
+}
+.smalldiv .regformdiv .formdiv{
+    background: none;
+    box-shadow: none;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row;
+}
+.smalldiv .regformdiv img{
+    width: calc(100% - 450px);
+    border-radius: 10px;
+    height: 590px;
+}
+.smalldiv .regformdiv .formdiv form{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.smalldiv .regformdiv .formdiv form .div{
+    width: 90%;
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+.smalldiv .regformdiv .formdiv form .div i{
+    font-size: 24px;
+    color: #555;
+}
+.smalldiv .regformdiv .formdiv form .div input{
+    height: 100%;
+    width: 92%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #555;
+}
+.smalldiv .regformdiv .formdiv form .img{
+    width: 90%;
+    border: 1px solid #555;
+    border-radius: 7px;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    flex-direction: column;
+}
+.smalldiv .regformdiv .formdiv form .img p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+}
+.smalldiv .regformdiv .formdiv form .img p i{
+    font-size: 24px;
+    margin-right: 5px;
+}
+.smalldiv .regformdiv .formdiv form .img input::-webkit-file-upload-button{
+    width: 120px;
+    height: 40px;
+    margin: 5px 10px;
+    border: 1px solid #555;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 7px;
+    color: #555;
+    cursor: pointer;
+}
+.smalldiv .regformdiv .formdiv form .address{
+    width: 90%;
+    border: 1px solid #555;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 10px;
+}
+.smalldiv .regformdiv .formdiv form .address i{
+    font-size: 24px;
+    color: #555;
+}
+.smalldiv .regformdiv .formdiv form .address textarea{
+    width: 92%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+}
+.smalldiv .regformdiv .formdiv form .btn{
+    width: 90%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    background: #EE3D4A;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 5px 5px 30px #ee3d4942;
+    margin: 10px auto;
+}
+
+/*-------------------------restaurant list-------------------------------*/
+
+.smalldiv .rlistdiv{
+    width: 100%;
+}
+.smalldiv .rlistdiv h2{
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.smalldiv .rlistdiv .carddiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.smalldiv .rlistdiv .carddiv .card{
+    width: calc(100% / 3.2);
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px;
+    flex-direction: column;
+}
+.smalldiv .rlistdiv .carddiv .card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 7px;
+}
+.smalldiv .rlistdiv .carddiv .card .rnamediv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.smalldiv .rlistdiv .carddiv .card .rnamediv h3{
+    color: #555;
+    font-size: 25px;
+    margin: 10px;
+}
+.smalldiv .rlistdiv .carddiv .card .rnamediv p{
+    display: flex;
+    align-items: flex-start;
+    font-size: 18px;
+    color: #777;
+}
+.smalldiv .rlistdiv .carddiv .card .rnamediv p i{
+    margin-right: 5px;
+}
+.smalldiv .rlistdiv .carddiv .card .btndiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px auto;
+    flex-direction: column;
+}
+.smalldiv .rlistdiv .carddiv .card .btndiv .btn{
+    width: 100%;
+    height: 45px;
+    background: #EE3D4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 5px 5px 20px #ee3d494d;
+    margin: 10px 5px;
+}
+/*----------------------------------------------------------footer----------------------------------------------------*/
+footer{
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    margin: 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+footer .container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 40px 0 20px 0;
+    color: #EE3D4A;
+    border-bottom: 4px solid #EE3D4A;
+}
+footer .container .social{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+footer .container .useful{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+}
+footer .container .social h3,
+footer .container .useful h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+footer .container .social .socialicon{
+    padding: 10px 0;
+}
+footer .container .social img{
+    width: 200px;
+}
+footer .container .social a,
+footer .container .useful a{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #EE3D4A;
+}
+footer .container .title{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+footer .container .title a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+footer .container .title p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+footer .copyright{
+    width:  100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    color: #EE3D4A;
+    padding: 20px;
+    font-weight: bold;
+}
+footer .copyright span{
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+}
+/*------------------------otp verify---------------*/
+.otpdiv .nav{
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    height: 70px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.otpdiv .nav a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.otpdiv .nav p{
+    font-size: 20px;
+    color: #EE3D4A;
+}
+.otpdiv .formdiv{
+    width: 500px;
+}
+.otpdiv .formdiv form{
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.otpdiv .formdiv form p{
+    font-size: 20px;
+    color: #555;
+    margin: 5px auto;
+}
+.otpdiv .formdiv form input{
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    font-size: 18px;
+    color: #555;
+    border-radius: 7px;
+    padding-left: 10px;
+    border: 1px solid #555;
+    outline: none;
+    background: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.otpdiv .formdiv form .btn{
+    background: #EE3D4A;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 1px 1px 30px #ee3d494d;
+}
+
+
+
+
+.errorcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.errordiv{
+    width: 800px;
+    height: auto;
+    padding: 20px;
+    margin:auto;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+.errordiv h1{
+    font-size: 250px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.errordiv h3{
+    font-size: 40px;
+    color: #555;
+    margin: 10px auto;
+}
+.errordiv p{
+    font-size: 25px;
+    color: #777;
+    margin: 10px auto;
+    padding: 20px;
+}
+.errordiv a{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border:1px solid #555;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #555;
+}

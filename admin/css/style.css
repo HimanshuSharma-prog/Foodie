@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: /*#1F2024*/#22252E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+   display: none;
+}
+/*---------------------------------------main div---------------------------------------------*/
+.maindiv{
+    width: 99vw;
+    height: 98vh;
+    margin:1vh auto;
+    border-radius: 7px;
+    background: #e8e8e8;
+    overflow: auto;
+    padding: 0;
+}
+.notification{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position:fixed;
+    top: 1vh;
+    left: 1vw;
+    flex-direction: column;
+    animation: slide 1s ease-in-out 1;
+    margin: auto;
+    z-index: 999999999;
+    transition: .6s ease-in-out;
+}
+.notification .error{
+    width: 100%;
+    padding: 10px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px auto;
+}
+.notification .success{
+    width: 100%;
+    padding: 10px;
+    background: #52ee3d;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px auto;
+}
+@keyframes slide{
+    0%{
+        top: -20vh;
+    }
+    100%{
+        top: 1vh;
+    }
+}
+/*---------------------------------------admin login div---------------------*/
+.admindiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+.admindiv .logindiv{
+    width: 900px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.1);
+}
+.admindiv .logindiv .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.admindiv .logindiv .title a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.admindiv .logindiv .title p{
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.admindiv .logindiv .formdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.admindiv .logindiv .formdiv p{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: #555;
+    margin: 15px auto;
+}
+.admindiv .logindiv .formdiv p a{
+    color: #EE3D4A;
+    margin-left: 5px;
+}
+.admindiv .logindiv .formdiv img{
+    width: 500px;
+    border-radius: 10px;
+}
+.admindiv .logindiv .formdiv form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.admindiv .logindiv .formdiv form .email,
+.admindiv .logindiv .formdiv form .password{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 10px;
+    margin: 5px auto;
+}
+.admindiv .logindiv .formdiv form .email input{
+    width: 90%;
+    height: 100%;
+    font-size: 18px;
+    color: #555;
+    border: none;
+    background: none;
+    outline: none;
+}
+.admindiv .logindiv .formdiv form .email i,
+.admindiv .logindiv .formdiv form .password i{
+    font-size: 25px;
+    color: #555;
+}
+#hidePass{
+    display: none;
+}
+.admindiv .logindiv .formdiv form .password input{
+    width: 83%;
+    height: 100%;
+    font-size: 18px;
+    color: #555;
+    border: none;
+    outline: none;
+    background: none;
+}
+.admindiv .logindiv .formdiv form .btn{
+    width: 100%;
+    height: 50px;
+    margin: 5px auto;
+    background: #EE3D4A;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 30px #ee3d4949;
+    border: none;
+    outline: none;
+}
+/*--------------------------------------------------sign up-----------------------------------------------*/
+
+
+.signupformcontainer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.signupformcontainer .nav{
+    width: 1000px;
+    height: 70px !important;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+.signupformcontainer .nav .title a{
+    font-size: 35px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.signupformcontainer .nav .title p{
+    font-size: 18px;
+    color: #EE3D4A;
+}
+.signupformcontainer .nav .btn{
+    width: 120px;
+    height: 45px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    margin-right: 20px;
+    box-shadow: 1px 1px 20px #ee3d4948;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.signupformcontainer .signupformdiv .formdiv{
+    width: auto;
+    background: none;
+    box-shadow: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.signupformcontainer .signupformdiv .formdiv form{
+    width: 1000px;
+    margin: 10px auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+.signupformcontainer .signupformdiv .formdiv form .col{
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div,
+.signupformcontainer .signupformdiv .formdiv form .col .password{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid #555;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div input{
+    width: 95%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div i,
+.signupformcontainer .signupformdiv .formdiv form .col .password i,
+.signupformcontainer .signupformdiv .formdiv form .col .address i{
+    font-size: 20px;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .password input{
+    width: 93%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .address{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    border-radius: 7px;
+    border: 1px solid #555;
+    margin: 10px auto;
+    padding: 10px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .address textarea{
+    width: 94%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .btndiv{
+    width: 100%;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .btndiv .btn{
+    width: 100%;
+    height: 50px;
+    background: #EE3D4A;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 5px 5px 20px #ee3d494d;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 10px auto;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img p{
+    font-size: 18px;
+    padding: 10px 0;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img p i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img input::-webkit-file-upload-button{
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    background: #fff;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv p{
+    font-size: 20px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv p a{
+    color: #EE3D4A;
+    margin-left: 5px;
+}
+
+/*------------------------responsive css-----------------------*/
+@media(max-width:900px){
+    .admindiv .logindiv{
+        width: 100%;
+    }
+    .admindiv .logindiv .formdiv img{
+        width: 45%;
+    }
+}
+@media(max-width:750px){
+    .admindiv .logindiv .formdiv{
+        flex-direction: column;
+    }
+    .admindiv .logindiv .formdiv img{
+        width: 100%;
+    }
+    .admindiv .logindiv .formdiv form{
+        padding: 0;
+        margin: 10px auto;
+    }
+}
+@media(max-width:500px){
+    .notification{
+        width: 95%;
+    }
+    .errordiv h1{
+        font-size: 150px;
+    }
+    .errordiv h3{
+        font-size: 25px;
+    }
+    .errordiv p{
+        font-size: 20px;
+        padding: 0;
+    }
+}
+.errorcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.errordiv{
+    width: 800px;
+    height: auto;
+    padding: 20px;
+    margin:auto;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+.errordiv h1{
+    font-size: 250px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.errordiv h3{
+    font-size: 40px;
+    color: #555;
+    margin: 10px auto;
+}
+.errordiv p{
+    font-size: 25px;
+    color: #777;
+    margin: 10px auto;
+    padding: 20px;
+}
+.errordiv a{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border:1px solid #555;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #555;
+}

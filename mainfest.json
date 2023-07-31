@@ -1,0 +1,30 @@
+{
+    "short_name": "Foodie",
+    "name": "Foodie",
+    "icons": [
+      {
+        "src": "images/logo-72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "images/logo.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "images/logo-144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "images/logo-310.png",
+        "type": "image/png",
+        "sizes": "310x310"
+      }
+    ],
+    "start_url": "index.php",
+    "background_color": "#22252E",
+    "display": "standalone",
+    "theme_color": "#22252E"
+  }

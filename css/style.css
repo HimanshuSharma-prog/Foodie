@@ -1,0 +1,2448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: /*#1F2024*/#22252E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+   display: none;
+}
+/*::-webkit-scrollbar-track{
+    background: #fff;+
+    background: -webkit-linear-gradient(45deg, #1d3ede, #01e6f8);
+    background: -ms-linear-gradient(45deg, #1d3ede, #01e6f8);
+    background: -moz-linear-gradient(45deg, #1d3ede, #01e6f8);
+    background: -o-linear-gradient(45deg, #1d3ede, #01e6f8);
+}*/
+/*---------------------------------------main div---------------------------------------------*/
+.maindiv{
+    width: 99vw;
+    height: 98vh;
+    margin:1vh auto;
+    border-radius: 7px;
+    background: /*#1F2024 */#e8e8e8;
+    overflow: auto;
+    padding: 0;
+}
+.notification{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position:fixed;
+    top: 1vh;
+    left: 1vw;
+    flex-direction: column;
+    animation: slide 1s ease-in-out 1;
+    margin: auto;
+    z-index: 999999999;
+    transition: .6s ease-in-out;
+}
+.notification .error{
+    width: 100%;
+    padding: 10px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px auto;
+}
+.notification .success{
+    width: 100%;
+    padding: 10px;
+    background: #52ee3d;
+    border-radius: 7px;
+    font-size: 18px;
+    color: #fff;
+    margin: 10px auto;
+}
+@keyframes slide{
+    0%{
+        top: -20vh;
+    }
+    100%{
+        top: 1vh;
+    }
+}
+/*-------------------------------------------nav---------------------------------------------*/
+
+.nav{
+    width: 1200px;
+    height: 70px;
+    background: #fff;
+    margin: 20px auto;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+.nav nav{
+    max-width: 1100px;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+}
+.nav nav .title a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.nav nav .search{
+    width: 550px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 2px solid #EE3D4A;
+}
+.nav nav .search input,
+.fixsearch .search input{
+    width: 93%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+    color: #EE3D4A;
+    font-size: 18px;
+    background: transparent;
+    text-transform: lowercase;
+}
+.nav nav .search input::placeholder,
+.fixsearch .search input::placeholder{
+    color: #EE3D4A;
+}
+.nav nav .search .fa,
+.fixsearch .search .fa{
+    font-size: 1.5rem;
+    color: #EE3D4A;
+    margin-right: 7px;
+}
+.nav nav .logindiv{
+    display: flex;
+    font-size: 23px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.nav nav .logindiv a{
+    color: #EE3D4A;
+    display: flex;
+    font-size: 23px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.nav nav .logindiv a:hover{
+    color:#FED100;
+}
+.nav nav .logindiv p{
+    color: #EE3D4A;
+    margin: 0 7px;
+}
+.nav nav .logindiv .userimg{
+    width:40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid #EE3D4A;
+}
+.nav nav .logindiv .cartbtn{
+    font-size: 35px;
+    font-weight: normal;
+}
+.fixed{
+    position: fixed;
+    top: 1vh;
+    margin:0;
+    width: 99vw !important;
+    z-index: 9999;
+}
+/*-------------------------------------------404 page -------------------*/
+.errorcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.errordiv{
+    width: 800px;
+    height: auto;
+    padding: 20px;
+    margin:auto;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+.errordiv h1{
+    font-size: 250px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.errordiv h3{
+    font-size: 40px;
+    color: #555;
+    margin: 10px auto;
+}
+.errordiv p{
+    font-size: 25px;
+    color: #777;
+    margin: 10px auto;
+    padding: 20px;
+}
+.errordiv a{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border:1px solid #555;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #555;
+}
+/*--------------------------------------------------------------------fix search bar-------------------------------------*/
+
+.fixsearch{
+    background: #EE3D4A;
+    width: 95%;
+    margin:auto;
+    border-radius: 7px;
+    box-shadow: 5px 5px 15px #ee3d4948;
+    display: none;
+}
+.fixsearch .search input,
+.fixsearch .search input::placeholder,
+.fixsearch .search .fa{
+    color: #fff !important;
+}
+.fixsearch .search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 2px solid #EE3D4A;
+}
+
+/*------------------------------------------------------sorting nav--------------------------------------------*/
+
+.sortnav{    
+    margin: 20px auto 10px;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: auto;
+}
+.sortnav .location{
+    font-size: 20px;
+    font-weight: 400;
+    color: #EE3D4A;
+    background: #fff;
+    border-radius: 7px;
+    padding:10px;
+}
+.sortnav form select{
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    background: #fff;
+    border: 2px solid #EE3D4A;
+    padding: 0 5px;
+    outline: none;
+    font-size: 18px;
+}
+.sortnav form select optgroup{
+    color: #EE3D4A;
+}
+.sortnav form select optgroup option{
+    color: #555;
+}
+.sortnav form .btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    background: #EE3D4A;
+    font-size: 18px;
+    margin-left: 10px;
+}
+/*-----------------------------------------------------small nav-----------------------------------------------*/
+
+.smallnav{
+    max-width: 1200px;
+    background: #fff;
+    margin: auto;
+    border-radius: 7px;
+    padding:10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.smallnav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.smallnav ul li{
+    position: relative;
+    cursor: pointer;
+}
+.smallnav ul li:hover img{
+    border-bottom: 2px solid #EE3D4A;
+}
+.smallnav ul li img{
+    width: 40px;
+    height: 40px;
+}
+.smallnav ul li .tooltip{
+    width: 120px;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 18px;
+    background: #EE3D4A;
+    color: #fff;
+    position: absolute;
+    top: -95%;
+    display: none;
+    left: -40px;
+}
+.smallnav ul li:hover .tooltip{
+    display: inline-block;
+}
+
+/*----------------------------------------------------------------container---------------------------------*/
+.container{
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.container .notfound{
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.container .notfound p{
+    font-size: 25px;
+    color: #555;
+}
+.container .notfound img{
+    height: 400px;
+}
+/* .container .card{
+    width: calc(100% / 3.1);
+    height: auto;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    color: #777;
+    text-align: left;
+}
+.container .card img{
+    width: 100%;
+    border-radius: 7px;
+}
+.container .card .name{
+    margin: 5px 0;
+}
+.container .card .pricediv{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.container .card .pricediv .rating{
+    color: #EE3D4A;
+}
+.container .card .locdiv{
+    display: flex;
+    margin: 5px 0;
+}
+.container .card .locdiv i{
+    margin-right: 5px;
+    color: #EE3D4A;
+}
+.container .card:hover{
+    transform: translateY(-4px);
+} */
+/*----------------------------------------------------------login form------------------------------------------------*/
+
+.formcontainer{
+    width: 99vw;
+    height: 98vh;
+    position: fixed;
+    top: -110%;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.233);
+    /* background: -webkit-linear-gradient(45deg, #ee3d4981, #fecf0080);
+    background: -ms-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -moz-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -o-linear-gradient(45deg, #ee3d4946, #fecf0046); */
+    backdrop-filter: saturate(380%) blur(10px);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .7s ease-in-out;
+    z-index: 9999999;
+}
+.formcontainer .formdiv{
+    width: 550px;
+    padding: 20px;
+    background: #fff;
+    /* background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100); */
+    border-radius: 10px;
+    box-shadow:1px 1px 30px  #ee3d496b;
+}
+.formcontainer .formdiv .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: #555;
+    padding: 10px;
+}
+.formcontainer .formdiv .title i{
+    font-size: 35px;
+}
+.formcontainer .formdiv form .username,
+.formcontainer .formdiv form .password{
+    width: 100%;
+    height: 60px;
+    border-radius: 7px;
+    border: 1px solid #555;
+    color: #555;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px auto 15px auto;
+}
+.formcontainer .formdiv form .username input{
+    width: 95%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #555;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.formcontainer .formdiv form .password input{
+    width: 87%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #555;
+    background: transparent;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.formcontainer .formdiv form input::placeholder{
+    color: #555;
+}
+#hidePass{
+    display: none;
+    cursor: pointer;
+}
+#showPass{
+    cursor: pointer;
+}
+.formcontainer .formdiv form .loginbtn{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: none;
+    background: #EE3D4A;
+    outline: none;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px #ee3d4948;
+}
+.formcontainer .formdiv form p{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 10px auto;
+    color: #555;
+    font-size: 18px;
+}
+.formcontainer .formdiv form p a{
+    color: #EE3D4A;
+    margin-left: 5px;
+}
+
+/*----------------------------------------------------------footer----------------------------------------------------*/
+footer{
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    margin: 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+footer .container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 40px 0 20px 0;
+    color: #EE3D4A;
+    border-bottom: 4px solid #EE3D4A;
+}
+footer .container .social{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+footer .container .useful{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+}
+footer .container .social h3,
+footer .container .useful h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+footer .container .social .socialicon{
+    padding: 10px 0;
+}
+footer .container .social img{
+    width: 200px;
+}
+footer .container .social a,
+footer .container .useful a{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #EE3D4A;
+}
+footer .container .title{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+footer .container .title a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+footer .container .title p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+footer .copyright{
+    width:  100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    color: #EE3D4A;
+    padding: 20px;
+    font-weight: bold;
+}
+footer .copyright span{
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+}
+
+/*-----------------------------------------------------------item page style-------------------*/
+
+.productcontainer{
+    max-width: 1200px;
+    height: auto;
+    padding: 10px;
+    background: #fff;
+    margin: 20px auto;
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.productcontainer .productImg{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.productcontainer .productImg .bigImg{
+    width: 69%;
+    overflow: hidden;
+    border-radius: 7px;
+}
+.productcontainer .productImg .bigImg img{
+    width: 100%;
+    border-radius: 7px;
+    height: 500px;
+}
+.productcontainer .productImg .bigImg img:hover{
+    transform: scale(1.5);
+    transition: transform .6s ease-in-out;
+}
+.productcontainer .productImg .smallImg{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;
+    justify-content: center;
+    text-align: center;*/
+    flex-wrap: wrap;
+}
+.productcontainer .productImg .smallImg .img{
+    width: calc(100% / 2.2);
+    margin: 5px;
+    border-radius: 7px;
+}
+.productcontainer .productdetails{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px auto;
+    padding-top: 10px;
+    color: rgb(105,105,105);
+}
+.productcontainer .productdetails .title{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.productcontainer .productdetails .title p{
+    font-size: 35px;
+}
+.productcontainer .productdetails .title .rating {
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.productcontainer .productdetails .locdiv{
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 5px;
+}
+.productcontainer .productdetails .locdiv i{
+    margin-right: 5px;
+}
+.productcontainer .productdetails .price{
+    font-size: 20px;
+    padding: 5px;
+}
+.productcontainer .btndiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.productcontainer .btndiv .btn{
+    width: 150px;
+    margin: 5px 7px;
+    background: #EE3D4A;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    color: #fff;
+    box-shadow: 1px 1px 10px #ee3d496b;
+}
+.productcontainer .btndiv .btn i{
+    margin-right: 5px;
+}
+
+/*-----------------------------------------------------------same items----------------------------*/
+
+.itemcontainer{
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px auto;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.itemcontainer .itemnav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+.itemcontainer .itemnav .navtitle{
+    width: 120px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(105,105,105);
+}
+/*.itemcontainer .itemnav .navtitle:hover{
+    border-bottom: 2px solid #EE3D4A;
+    color: #EE3D4A;
+}*/
+.itemcontainer .sliderbar{
+    width: 100%;
+    height: 2.5px;
+    background:#9999;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.itemcontainer .sliderbar .slider{
+    width: 120px;
+    height: 100%;
+    background: #EE3D4A;
+    transition: .6s ease-in-out;
+}
+.itemcontainer .smallcontainer{
+    width: 100%;
+    height: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.active{
+    color: #EE3D4A !important;
+}
+.itemcontainer .smallcontainer .cardcontainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+/* .itemcontainer .smallcontainer .cardcontainer .card{
+    width: calc(100% / 3.1);
+    height: auto;
+    border: 1.5px solid #EE3D4A;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 18px;
+    color: #777;
+    text-align: left;
+    background: #fff;
+}
+.itemcontainer .smallcontainer .cardcontainer .card img{
+    width: 100%;
+    border-radius: 7px;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .name{
+    margin: 5px 0;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .pricediv{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .pricediv .rating{
+    color: #EE3D4A;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .locdiv{
+    display: flex;
+    margin: 5px 0;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .locdiv i{
+    margin-right: 5px;
+    color: #EE3D4A;
+}
+.itemcontainer .smallcontainer .cardcontainer .card:hover{
+    transform: translateY(-4px);
+} */
+
+
+.itemcontainer .smallcontainer .cardcontainer .card{
+    width: calc(100% / 3.1);
+    height:330px;
+    background: #fff;
+    border: 1.5px solid #EE3D4A;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    color: #000;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    transition: ease-in-out .6s;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .blurdiv{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: auto;
+    border-radius: 7px;
+    left: 5% ;
+    bottom: 15px;
+    background: -webkit-linear-gradient(45deg,rgba(204, 204, 204, 0.3),rgba(204, 204, 204, 0.3));
+    background: -moz-linear-gradient(45deg,#ffffffce,#ffffffbe);
+    /* background: -webkit-linear-gradient(45deg, #ee3d4981, #fecf0080);
+    background: -ms-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -moz-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -o-linear-gradient(45deg, #ee3d4946, #fecf0046); */
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 10px;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .name{
+    margin: 5px 0;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .pricediv{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .pricediv .rating{
+    color: #000;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .locdiv{
+    display: flex;
+    height:30px;
+    overflow:hidden;
+    margin: 5px 0;
+}
+.itemcontainer .smallcontainer .cardcontainer .card .locdiv i{
+    margin-right: 5px;
+    color: #000;
+}
+.itemcontainer .smallcontainer .cardcontainer .card:hover{
+    transform: translateY(-4px);
+}
+.itemcontainer .smallcontainer .cardcontainer .card:hover .img{
+    transform: scale(1.5);
+}
+
+.itemcontainer .smallcontainer .reviewsdiv{
+    width: 100%;
+    margin: 10px auto;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox{
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid rgb(232,232,232);
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .username{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: rgb(105,105,105);
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .username img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .rating{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 10px auto;
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .rating i{
+    margin-right: 5px;
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .feedback{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 10px auto;
+    font-size: 18px;
+    color: rgb(105,105,105);
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .replydiv{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    flex-direction: column;
+    margin: 10px auto;
+    font-size: 18px;
+    color: rgb(105,105,105);
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .reviewimg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    margin: 10px auto;
+}
+.itemcontainer .smallcontainer .reviewsdiv .reviewbox .reviewimg img{
+    width: 250px;
+    border-radius: 7px;
+}
+.itemcontainer .smallcontainer .photodiv{
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px auto;
+}
+.itemcontainer .smallcontainer .photodiv img{
+    width: 90%;
+    border-radius: 7px;
+    margin: 10px auto;
+}
+/*---------------------------------------------------review div------------------------*/
+.reviewcontainer{
+    width: 99vw;
+    height: 98vh;
+    position: fixed;
+    top: -110%;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.233);
+    /* background: -webkit-linear-gradient(45deg, #ee3d4981, #fecf0080);
+    background: -ms-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -moz-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -o-linear-gradient(45deg, #ee3d4946, #fecf0046); */
+    backdrop-filter: saturate(380%) blur(10px);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .7s ease-in-out;
+    z-index: 9999999;
+}
+.reviewcontainer .formdiv{
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    height: auto;
+    padding: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.reviewcontainer .formdiv .title{
+    width: 100%;
+    padding: 10px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: #555;
+}
+.reviewcontainer .formdiv .title i{
+    font-size: 35px;
+    cursor: pointer;
+}
+.reviewcontainer .formdiv form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px;
+}
+.reviewcontainer .formdiv form .ratingdiv input{
+    -webkit-appearance: none;
+    width: 250px;
+    height: 15px;
+    outline: none;
+    background: #e8e8e8;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.reviewcontainer .formdiv form .ratingdiv input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #EE3D4A;
+    border-radius: 50%;
+}
+.reviewcontainer .formdiv form .ratingdiv .rating i{
+    font-size: 30px;
+    margin: 10px;
+    color: #e8e8e8;
+}
+.reviewcontainer .formdiv form .reviewdiv{
+    width: 100%;
+}
+.reviewcontainer .formdiv form .reviewdiv textarea{
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    margin: 10px auto;
+}
+.reviewcontainer .formdiv form .imgdiv{
+    width: 100%;
+}
+.reviewcontainer .formdiv form .imgdiv input::-webkit-file-upload-button{
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 7px;
+    outline: none;
+    background: #EE3D4A;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 1px 1px 20px #ee3d4948;
+}
+.reviewcontainer .formdiv form .btndiv input{
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 7px;
+    outline: none;
+    background: #EE3D4A;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 1px 1px 20px #ee3d4948;
+    cursor: pointer;
+}
+
+
+
+/*-----------------------------------------------------cart div ------------------------------------------*/
+
+.cartcontainer{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: -500px;
+    margin: 3vh 1.2vw;
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.233);
+    backdrop-filter: saturate(380%) blur(10px);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: .7s ease-in-out;
+}
+.cartcontainer .closediv{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.cartcontainer .closediv p{
+    color: #EE3D4A;
+}
+.cartcontainer .closediv .cartclosebtn{
+    width: 35px;
+    height: 35px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #ee3d496c;
+}
+.cartcontainer .cartdivcontainer{
+    width: 100%;
+    max-height: 600px;
+    overflow: auto;
+    border-radius: 7px;
+}
+.cartcontainer .cartdiv{
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.cartcontainer .cartdiv .itemimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.cartcontainer .cartdiv .itemimg img{
+    width: 110px;
+    height: 110px;
+    border-radius: 7px;
+}
+.cartcontainer .cartdiv .details{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.cartcontainer .cartdiv .itemname{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+.cartcontainer .cartdiv .itemname .title{
+    width: 50%;
+    text-align: left;
+}
+.cartcontainer .cartdiv .itemname p{
+    color: rgb(105,105,105);
+    font-size: 18px;
+    height: 25px;
+}
+.cartdivcontainer .cartdiv .qtydiv{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: auto;
+}
+.cartcontainer .cartdiv .qty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto 10px;
+} 
+/*.cartcontainer .cartdiv .qty .addbtn,
+.cartcontainer .cartdiv .qty .subbtn{
+    width: 35px;
+    height: 30px;
+    background: #EE3D4A;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #ee3d496c;
+}*/
+.cartcontainer .cartdiv .qty input{
+    width: 45px;
+    height: 45px;
+    border: 2px solid #EE3D4A;
+    border-radius: 7px;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+    color: #EE3D4A;
+}
+.cartcontainer .cartdiv .qty input::-webkit-inner-spin-button{
+    background: #EE3D4A;
+    color: #EE3D4A;
+}
+.cartcontainer .cartdiv .remove{
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    background: #EE3D4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #ee3d496c;
+}
+.cartcontainer .cartdiv .remove a{
+    color: #fff;
+}
+.cartcontainer .checkoutdiv{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: #fff;
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.cartcontainer .checkoutdiv p{
+    font-size: 20px;
+    color: #EE3D4A;
+}
+.cartcontainer .checkoutdiv .totalamt{
+    display: flex;
+    font-size: 20px;
+    padding: 7px;
+    border:2px solid #EE3D4A;
+    border-radius: 7px;
+}
+.cartcontainer .checkoutdiv .totalamt input{
+    border: none;
+    font-size: 20px;
+    margin-left: 5px;
+    width: 65px;
+    color: #EE3D4A;
+}
+.cartcontainer .checkoutbtn{
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background: #EE3D4A;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px #ee3d496c;
+}
+.cartcontainer .noitemdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 25px;
+    color: #555;
+}
+.cartcontainer .noitemdiv p{
+    margin: 15px 10px;
+}
+
+
+
+
+/*---------------------------------------------------------------------user dash board----------------------------------------*/
+
+.usercontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.usercontainer .navcontainer{
+    width: 100%;
+    padding: 10px;
+}
+.usercontainer .navcontainer .nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: auto ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.usercontainer .navcontainer .nav .title a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.usercontainer .maincontainer{
+    width: 100%;
+    height: calc(100% - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 10px 10px 10px ;
+}
+.usercontainer .sidenav{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: .6s ease-in-out;
+    margin-left: -320px;
+}
+.usercontainer .sidenav .userimg{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.usercontainer .sidenav .userimg img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.usercontainer .sidenav .userimg .username{
+    font-size: 30px;
+    margin: 20px auto;
+    color: rgb(105,105,105);
+}
+.usercontainer .sidenav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.usercontainer .sidenav ul li{
+    width: 100%;
+}
+.usercontainer .sidenav ul li a,
+.usercontainer .sidenav .logoutbtn{
+    width: 100%;
+    height: 50px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+    margin: 7px auto;
+    cursor: pointer;
+    border-radius: 7px;
+    color: rgb(105,105,105);
+    position: relative;
+}
+.usercontainer .sidenav ul li .option,
+.usercontainer .sidenav .logoutbtn .option{
+    position: absolute;
+    left: 100%;
+    color: #fff;
+    background: #EE3D4A;
+    width: 200px;
+    height: 50px;
+    margin: auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #ee3d496c;
+    display: none;
+}
+.usercontainer .sidenav ul li i,
+.usercontainer .sidenav .logoutbtn i{
+    margin: 10px;
+}
+.usercontainer .sidenav ul li a:hover,
+.usercontainer .sidenav .logoutbtn:hover{
+    background: #EE3D4A;
+    box-shadow: 0px 0px 10px #ee3d496c;
+    color: #fff;
+}
+.usercontainer .sidenav .logoutbtn{
+    margin-bottom: 20px;
+}
+
+.usercontainer .menudiv .menubtn{
+    font-size: 35px;
+    background: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(105,105,105);
+}
+.usercontainer .menudiv .menubtn #closeBtn{
+    display: none;
+}
+
+.usercontainer .smalldiv{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    margin-left: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.usercontainer .smalldiv .detailsdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    overflow: auto;
+}
+.usercontainer .smalldiv .detailsdiv .orderdetailsdiv{
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin:20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+
+.usercontainer .smalldiv .detailsdiv .orderdetailsdiv .smallcard{
+    width: auto;
+    height: auto;
+    border: 1px solid #555;
+    margin: 10px ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    color: #555;
+}
+.usercontainer .smalldiv .detailsdiv .orderdetailsdiv .smallcard h2{
+    font-size: 35px;
+    margin: 10px auto;
+}
+.usercontainer .smalldiv .detailsdiv .userdetailsdiv{
+    background: #fff;
+    width: 100%;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    margin:20px auto;
+    padding: 20px;
+    text-align: left;
+}
+.usercontainer .smalldiv .detailsdiv .userdetailsdiv p{
+    font-size: 20px;
+    display: flex; 
+    color: #555 ;
+    padding: 10px 0;
+}
+
+.navactive{
+    background: #EE3D4A;
+    box-shadow: 1px 1px 20px #ee3d4950;
+    color: #fff !important;
+}
+
+/*----------------------card----------------------------*/
+
+.container .card{
+    width: calc(100% / 3.1);
+    height:330px;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    color: #000000;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.container .card .img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    transition: ease-in-out .6s;
+}
+.container .card .blurdiv{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: auto;
+    border-radius: 7px;
+    left: 5% ;
+    bottom: 15px;
+     background: -webkit-linear-gradient(45deg,rgba(204, 204, 204, 0.3),rgba(204, 204, 204, 0.3));
+    background: -moz-linear-gradient(45deg,#ffffffce,#ffffffbe);
+    /* background: -webkit-linear-gradient(45deg, #ee3d4981, #fecf0080);
+    background: -ms-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -moz-linear-gradient(45deg, #ee3d4946, #fecf0046);
+    background: -o-linear-gradient(45deg, #ee3d4946, #fecf0046); */
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 10px;
+}
+.container .card .name{
+    margin: 5px 0;
+}
+.container .card .pricediv{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.container .card .pricediv .rating{
+    color: #000;
+}
+.container .card .locdiv{
+    display: flex;
+    margin: 5px 0;
+    height: 40px;
+    overflow: hidden;
+}
+.container .card .locdiv i{
+    margin-right: 5px;
+    color: #000;
+}
+.container .card:hover{
+    transform: translateY(-4px);
+}
+.container .card:hover .img{
+    transform: scale(1.5);
+}
+
+
+/*--------------------------------------------------sign up-----------------------------------------------*/
+
+
+.signupformcontainer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.signupformcontainer .nav{
+    width: 1000px;
+    height: 70px !important;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.signupformcontainer .nav .title{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.signupformcontainer .nav .btn{
+    width: 120px;
+    height: 45px;
+    background: #EE3D4A;
+    border-radius: 7px;
+    margin-right: 20px;
+    box-shadow: 1px 1px 20px #ee3d4948;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.signupformcontainer .signupformdiv .formdiv form{
+    width: 1000px;
+    margin: 10px auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+.signupformcontainer .signupformdiv .formdiv form .col{
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div,
+.signupformcontainer .signupformdiv .formdiv form .col .password{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid #555;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div input{
+    width: 95%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .div i,
+.signupformcontainer .signupformdiv .formdiv form .col .password i,
+.signupformcontainer .signupformdiv .formdiv form .col .address i{
+    font-size: 20px;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .password input{
+    width: 93%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .address{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    border-radius: 7px;
+    border: 1px solid #555;
+    margin: 10px auto;
+    padding: 10px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .address textarea{
+    width: 94%;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .btndiv{
+    width: 100%;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .btndiv .btn{
+    width: 100%;
+    height: 50px;
+    background: #EE3D4A;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 5px 5px 20px #ee3d494d;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 10px auto;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img p{
+    font-size: 18px;
+    padding: 10px 0;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img p i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .img input::-webkit-file-upload-button{
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #555;
+    border-radius: 7px;
+    background: #fff;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv p{
+    font-size: 20px;
+    color: #555;
+}
+.signupformcontainer .signupformdiv .formdiv form .col .logindiv p a{
+    color: #EE3D4A;
+    margin-left: 5px;
+}
+/*------------------------otp verify---------------*/
+.otpdiv .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.otpdiv .nav a{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+    font-weight: bold;
+}
+.otpdiv .nav p{
+    font-size: 20px;
+    color: #EE3D4A;
+}
+.otpdiv .formdiv form{
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.otpdiv .formdiv form p{
+    font-size: 20px;
+    color: #555;
+    margin: 5px auto;
+}
+.otpdiv .formdiv form input{
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    font-size: 18px;
+    color: #555;
+    border-radius: 7px;
+    padding-left: 10px;
+    border: 1px solid #555;
+    outline: none;
+    background: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.otpdiv .formdiv form .btn{
+    background: #EE3D4A;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 1px 1px 30px #ee3d494d;
+}
+/*-----------------------------------checkout div------------------*/
+.cartcheckoutdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+}
+.cartcheckoutdiv .nav{
+    width: 1100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 30px auto 10px auto;
+}
+.cartcheckoutdiv .nav h1{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.cartcheckoutdiv .nav p{
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.cartcheckoutdiv .cartdetailsdiv{
+    width: 1100px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.cartcheckoutdiv .cartdetailsdiv table{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    color: #555;
+}
+.cartcheckoutdiv .cartdetailsdiv table tr td{
+    padding: 10px;
+}
+.cartcheckoutdiv .cartdetailsdiv table tr td img{
+    width: 100px;
+    border-radius: 10px;
+}
+.cartcheckoutdiv .paymentdiv{
+    width: 1100px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: #fff;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.cartcheckoutdiv .paymentdiv .pricediv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 50%;
+}
+.cartcheckoutdiv .paymentdiv p{
+    font-size: 25px;
+    color: #555;
+}
+.cartcheckoutdiv .paymentdiv .btndiv{
+    padding: 10px;
+    display: flex;
+}
+.cartcheckoutdiv .paymentdiv .btndiv .btn{
+    height: 50px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #EE3D4A;
+    color: #fff;
+    font-size: 20px;
+    margin: auto 10px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 20px #ee3d4950;
+}
+.cartcheckoutdiv .userdetails{
+    width: 1100px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.cartcheckoutdiv .userdetails p{
+    font-size: 20px;
+    margin: 5px;
+    color: #555;
+}
+/*--------------------------paytm div--------------------*/
+.paytmdiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+}
+.paytmdiv .nav{
+    width: 1100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 30px auto 10px auto;
+}
+.paytmdiv .nav h1{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.paytmdiv .nav p{
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.paytmdiv form{
+    width: 700px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.paytmdiv form p{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: #555;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 5px auto;
+    padding: 10px;
+}
+.paytmdiv form input{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    color: #555;
+    font-size: 20px;
+    color: #555;
+    border: 1px solid #555;
+    border-radius: 7px;
+    margin: 5px auto;
+    padding: 10px;
+}
+.paytmdiv form .hidden{
+    display: none;
+}
+.paytmdiv form .btn{
+    background: #EE3D4A;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 1px 1px 20px #ee3d4950;
+}
+
+/*-------------------------orders details-----------------------------*/
+.userorderdetails{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+}
+.userorderdetails .nav{
+    width: 1100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 30px auto 10px auto;
+}
+.userorderdetails .nav h1{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.userorderdetails .nav p{
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.userorderdetails .detailsdiv{
+    width: 1100px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+}
+.userorderdetails .detailsdiv .col{
+    width: 49%;
+    margin: 5px;
+}
+.userorderdetails .detailsdiv .col img{
+    width: 100%;
+    border-radius: 10px;
+    height: 460px;
+}
+.userorderdetails .detailsdiv .col p{
+    width: 100%;  
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    border-radius: 7px;
+    color: #555;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.userorderdetails .trackdiv{
+    width: 1100px;
+    background: #fff;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.userorderdetails .trackdiv .title{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+}
+.userorderdetails .trackdiv .sliderdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+}
+.userorderdetails .trackdiv .sliderdiv p{
+    color: #555;
+    font-size: 20px;
+}
+.userorderdetails .trackdiv .sliderdiv .slider{
+    width: 80%;
+    background: #e8e8e8;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.userorderdetails .trackdiv .sliderdiv .slider .slidebar{
+    height: 100%;
+    background: #EE3D4A;
+}
+
+/*-----------------------------------invoice div--------------------------*/
+.invoicediv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+}
+.invoicediv .billdiv{
+    width: 1000px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.invoicediv .billdiv .title{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 2px solid #EE3D4A;
+}
+.invoicediv .billdiv .title .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.invoicediv .billdiv .title .logo h1{
+    height: 50px;
+    font-size: 45px;
+    color: #EE3D4A;
+}
+.invoicediv .billdiv .title .logo img{
+    width: 70px;
+}
+.invoicediv .billdiv .title p{
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.invoicediv .billdiv .shipaddress,
+.invoicediv .billdiv .restaurant{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px;
+    color: #555;
+    border-bottom: 2px solid #555;
+}
+.invoicediv .billdiv .shipaddress h1,
+.invoicediv .billdiv .restaurant h1{
+    margin: 5px;
+}
+.invoicediv .billdiv .shipaddress p,
+.invoicediv .billdiv .restaurant p{
+    font-size: 20px;
+    margin: 5px;
+}
+.invoicediv .billdiv .itemdiv{
+    width: 100%;
+    padding: 10px;
+}
+.invoicediv .billdiv .itemdiv table{
+    width: 100%;
+}
+.invoicediv .billdiv .itemdiv table tr th{
+    font-size: 25px;
+    color: #555;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 7px;
+}
+.invoicediv .billdiv .itemdiv table tr td{
+    font-size: 20px;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 7px;
+    color: #555;
+}
+.invoicediv .billdiv .total_amount{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 10px;
+}
+.invoicediv .billdiv .total_amount p{
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    color: #555;
+    border: 1px solid #555;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:2px;
+}
+/*---------------------------------------cancel order*----------------*/
+.cancelorder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+}
+.cancelorder .nav{
+    width: 1100px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 30px auto 10px auto;
+}
+.cancelorder .nav h1{
+    font-size: 45px;
+    background: -webkit-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -ms-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -moz-linear-gradient(120deg, #EE3D4A, #FED100);
+    background: -o-linear-gradient(120deg, #EE3D4A, #FED100);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px #fecf0041;
+}
+.cancelorder .nav p{
+    font-size: 25px;
+    color: #EE3D4A;
+}
+.cancelorder .orderdiv{
+    width: 1100px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.cancelorder .detailsdiv{
+    width: 100%;
+    padding: 10px;
+}
+.cancelorder .detailsdiv table{
+    width: 100%;
+    font-size: 20px;
+    color: #555;
+}
+.cancelorder .detailsdiv table tr th,
+.cancelorder .detailsdiv table tr td{
+    padding: 10px;
+}
+.cancelorder .detailsdiv table tr td img{
+    width: 100px;
+    border-radius: 10px;
+}
+.cancelorder .formdiv{
+    width: 100%;
+    background: #fff;
+}
+.cancelorder .formdiv form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.cancelorder .formdiv form textarea{
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+    resize: none;
+    font-size: 18px;
+    color: #555;
+    outline: none;
+    margin: 5px auto;
+    padding: 10px;
+}
+.cancelorder .formdiv form .hidden{
+    display: none;
+}
+.cancelorder .formdiv form input{
+    width: 100%;
+    height: 50px;
+    background:#EE3D4A;
+    border-radius: 7px;
+    resize: none;
+    font-size: 25px;
+    color: #ffff;
+    outline: none;
+    margin: 5px auto;
+    border: none;
+    box-shadow: 1px 1px 20px #ee3d4950;
+}

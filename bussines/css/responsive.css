@@ -1,0 +1,233 @@
+@media(max-width:1200px){
+    footer .container{
+        width: 95%;
+    }
+    footer .container .social,
+    footer .container .useful{
+        width: 20%;
+    }
+    footer .container .title{
+        width: 60%;
+    }
+}
+@media(max-width:1100px){
+    .navdiv .nav,
+    .smalldiv,
+    .formdiv {
+        width: 95%;
+    }
+}
+@media(max-width:1130px){
+    .smallcontainer .homediv{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        overflow: auto;
+    }
+    .smallcontainer .homediv .carddiv{
+        width: 100%;
+    }
+    .otpdiv .nav{
+        width:95%
+    }
+}
+@media(max-width:1070px){
+    .smalldiv .rlistdiv .carddiv .card{
+        width: calc(100% / 3.25);
+    }
+}
+@media(max-width:1000px){
+    .signupformcontainer .nav,
+    .signupformcontainer .signupformdiv .formdiv form{
+        width: 95%;
+    }
+}
+@media(max-width:900px){
+    .smalldiv .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .smalldiv .btndiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .smalldiv .rlistdiv .carddiv .card{
+        width: calc(100% / 2.15);
+    }
+}
+/* @media(max-width:950px){
+    .smalldiv .rlistdiv .carddiv .card{
+        width: 100%;
+    }
+} */
+
+@media(max-width:850px){
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .social,
+    footer .container .useful{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+    footer .container .social h3,
+    footer .container .useful h3{
+        border-bottom: 2px solid #EE3D4A;
+    }
+    footer .container .title{
+        width: 100%;
+    }
+}
+@media(max-width:800px){
+    .formdiv .col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .formdiv .col img{
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+    .formdiv .col form{
+        padding: 0;
+        width: 100%;
+    }
+    .formdiv .col form input{
+        width: 100%;
+    }
+    .formdiv .col form .username,
+    .formdiv .col form .password,
+    .formdiv .col form .loginbtn,
+    .formdiv .col form p{
+        width: 100%;
+        font-size: 18px;
+    }
+    .smalldiv .searchdiv form{
+        padding: 10px 0;
+    }
+    .smalldiv .searchdiv form .search{
+        width: 100%;
+    }
+    
+    .smalldiv .regformdiv .formdiv{
+        flex-direction: column;
+    }
+    .smalldiv .regformdiv .formdiv img{
+        width: 100%;
+        height: auto;
+    }
+    .smalldiv .regformdiv .formdiv form{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .smalldiv .regformdiv .formdiv form .div,
+    .smalldiv .regformdiv .formdiv form .img,
+    .smalldiv .regformdiv .formdiv form .address,
+    .smalldiv .regformdiv .formdiv form .btn{
+        width: 100%;
+    }
+}
+@media(max-width:700px){
+    
+    .signupformcontainer .signupformdiv .formdiv form{
+        flex-direction: column;
+        height: 80vh;
+        overflow: auto;
+    }
+    .signupformcontainer .signupformdiv .formdiv form .col{
+        width: 100%;
+    }
+}
+@media(max-width:650px){
+    .smalldiv .rlistdiv .carddiv .card{
+        width: calc(100% / 2.2);
+    }
+    .smalldiv .rlistdiv .carddiv .card .rnamediv h3{
+        font-size: 20px;
+    }
+}
+@media(max-width:600px){
+    .smallcontainer .detailsdiv .details .div{
+        width: 100%;
+        overflow: auto;
+    }
+}
+@media(max-width:550px){
+    .navdiv .nav{
+        height: 65px;
+    }
+    .navdiv .nav nav .title a{
+        font-size: 30px;
+    }
+    .line{
+        display: flex;
+        padding: 0 5px;
+        font-weight: normal;
+    }
+    .smalldiv .btndiv{
+        padding: 0;
+    }
+    .smalldiv .btndiv .regbtn,
+    .smalldiv .btndiv .listbtn{
+        font-size: 20px;
+        width: auto;
+        padding: 10px;
+    }
+    .smalldiv .title{
+        padding: 0;
+    }
+    .smalldiv .title h2{
+        font-size: 35px;
+        padding: 0;
+    }
+    .smalldiv .title p{
+        font-size: 18px;
+    }
+    .smalldiv .whydiv h2{
+        font-size: 25px;
+    }
+    .smalldiv .whydiv p{
+        font-size: 18px;
+    }
+    .smalldiv .rlistdiv .carddiv .card{
+        width: 100%;
+    }
+    .notification{
+        width: 95%;
+    }
+    .errordiv h1{
+        font-size: 150px;
+    }
+    .errordiv h3{
+        font-size: 25px;
+    }
+    .errordiv p{
+        font-size: 20px;
+        padding: 0;
+    }
+    .otpdiv .formdiv{
+        width: 95%;
+    }
+}
+@media(max-width:450px){
+    .smalldiv .btndiv .regbtn,
+    .smalldiv .btndiv .listbtn{
+        font-size: 18px;
+        width: auto;
+        padding: 10px;
+    }
+}

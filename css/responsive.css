@@ -1,0 +1,426 @@
+
+@media(max-width:1200px){
+    .nav{
+        width: 95%;
+        margin-bottom: 10px;
+    }.nav nav{
+        padding: 0 20px;
+    }
+    .smallnav{
+        width: 95%;
+    }
+    footer .container{
+        width: 95%;
+    }
+    footer .container .social,
+    footer .container .useful{
+        width: 20%;
+    }
+    footer .container .title{
+        width: 60%;
+    }
+    .productcontainer,
+    .itemcontainer{
+        width: 95%;
+    }
+   
+}
+@media(max-width:1100px){
+    .container,
+    .sortnav{
+        width: 95%;
+    }
+    .userorderdetails .nav,
+    .cartcheckoutdiv .nav,
+    .cartcheckoutdiv .cartdetailsdiv,
+    .cartcheckoutdiv .paymentdiv,
+    .cartcheckoutdiv .userdetails,
+    .paytmdiv .nav,
+    .userorderdetails .detailsdiv,
+    .userorderdetails .trackdiv,
+    .cancelorder .nav,
+    .cancelorder .orderdiv{
+        width: 95%;
+    }
+}
+@media(max-width:1050px){
+    .usercontainer .sidenav{
+        width: 80px;
+        padding: 10px;
+    }
+    .usercontainer .sidenav  .userimg .username{
+        display: none;
+    }
+    .usercontainer .sidenav .userimg img{
+        width: 60px;
+        height: 60px;
+    } 
+    .usercontainer .sidenav ul li p,
+    .usercontainer .sidenav .logoutbtn p{
+        display: none;
+    }
+    .usercontainer .sidenav ul li a,
+    .usercontainer .sidenav .logoutbtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+    .usercontainer .sidenav ul li i,
+    .usercontainer .sidenav .logoutbtn i{
+        margin: 0;
+    }
+    .usercontainer .sidenav ul li:hover .option,
+    .usercontainer .sidenav .logoutbtn:hover .option{
+        display: flex;
+    }
+    /*.usercontainer .smalldiv .detailsdiv {
+        justify-content: flex-start;
+    }
+    .usercontainer .smalldiv .detailsdiv .orderdetailsdiv{
+        width: 100%;
+        flex-direction: column;
+    }
+    .usercontainer .smalldiv .detailsdiv .orderdetailsdiv .smallcard{
+        width: 100%;
+    }*/
+}
+@media(max-width:1000px){
+    .nav nav .search{
+        width: 450px;
+    }
+    .container .card,
+    .itemcontainer .smallcontainer .cardcontainer .card{
+        width: calc(100% / 3.2);
+    }
+    .itemcontainer .smallcontainer .reviewsdiv .reviewbox{
+        width: 100%;
+    }
+    .container .card{
+        width: calc(100% / 3.2);
+    }
+    .signupformcontainer .nav,
+    .signupformcontainer .signupformdiv .formdiv form{
+        width: 95%;
+    }
+    .signupformcontainer .nav{
+        padding: 0;
+    }
+    .cancelorder .orderdiv .detailsdiv{
+        overflow: auto;
+    }
+    .cancelorder .detailsdiv table{
+        width: 1000px;
+    } 
+}
+@media(max-width:900px){
+    .nav{
+        height: 55px;
+    }
+    .nav nav .title h1{
+        font-size: 35px;
+    }
+    .nav nav .search{
+        display: none;
+    }
+    .fixsearch{
+        display: flex;
+    }
+    .nav nav .logindiv{
+        font-size: 20px;
+    }
+    .smallnav{
+        margin: 10px auto;
+        overflow: auto;
+        justify-content: center;
+    }
+    .smallnav ul li{
+        margin: auto 10px;
+    }
+    .smallnav ul li:hover .tooltip{
+        display: none;
+    }
+    /*.container .card{
+        width: calc(100% / 3.2);
+    }*/
+    .productcontainer .productImg {
+        flex-direction: column;
+    }
+    .productcontainer .productImg .bigImg{
+        width: 100%;
+    }
+    .productcontainer .productImg .smallImg{
+        width: 100%;
+        justify-content: center;
+    }
+    .productcontainer .productImg .smallImg .img{
+        width: 100px;
+        height: 100px;
+    }
+    .container .card,
+    .itemcontainer .smallcontainer .cardcontainer .card{
+        width: calc(100% / 2.1);
+    }
+    .usercontainer .navcontainer .nav{
+        height: 65px;
+    }
+    .container .card{
+        width: calc(100% / 2.1);
+    }
+}
+@media(max-width:850px){
+    .sortnav{
+        justify-content: center;
+    }
+    .sortnav form{
+        display: none;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .social,
+    footer .container .useful{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+    footer .container .social h3,
+    footer .container .useful h3{
+        border-bottom: 2px solid #EE3D4A;
+    }
+    footer .container .title{
+        width: 100%;
+    }
+    .usercontainer .smalldiv .detailsdiv {
+        justify-content: flex-start;
+    }
+    .usercontainer .smalldiv .detailsdiv .orderdetailsdiv{
+        width: 100%;
+        flex-direction: column;
+    }
+    .usercontainer .smalldiv .detailsdiv .orderdetailsdiv .smallcard{
+        width: 100%;
+    }
+    .errordiv{
+        width: 95%;
+    }
+}
+@media(max-width:730px){
+    .productcontainer .btndiv{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .signupformcontainer .signupformdiv .formdiv form{
+        flex-direction: column;
+        height: 83vh;
+        overflow: auto;
+    }
+    .signupformcontainer .signupformdiv .formdiv form .col{
+        width: 100%;
+    }
+    .errordiv h1{
+        font-size: 200px;
+    }
+    .errordiv h3{
+        font-size: 30px;
+    }
+    .paytmdiv form{
+        width: 95%;
+    }
+}
+@media(max-width:650px){
+    .cartcheckoutdiv .paymentdiv{
+        flex-direction: column;
+    }
+    .cartcheckoutdiv .paymentdiv .pricediv{
+        width: 100%;
+        padding: 10px;
+    }
+    .cartcheckoutdiv .paymentdiv .btndiv{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .userorderdetails .detailsdiv{
+        flex-direction: column;
+    }
+    .userorderdetails .detailsdiv .col{
+        width: 100%;
+    }
+    .userorderdetails .detailsdiv .col img{
+        height: 300px;
+    }
+    .userorderdetails .trackdiv .sliderdiv p{
+        font-size: 18px;
+    }
+    .userorderdetails .trackdiv .sliderdiv .slider{
+        width: 75%;
+        margin: auto 5px;
+    }
+}
+@media(max-width:600px){
+    .container .card,
+    .container .card{
+        width: calc(100% / 2.1);
+    }
+    .formcontainer .formdiv{
+        width: 95%;
+        padding: 10px;
+    }
+    .productcontainer .productImg .bigImg img{
+        height: 200px;
+    }
+    .cartcheckoutdiv .cartdetailsdiv table{
+        font-size: 18px;
+    }
+    .cartcheckoutdiv .cartdetailsdiv table tr td img{
+        width: 70px;
+    }
+}
+@media(max-width:560px){
+    .container .notfound img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-width:500px){
+    .productcontainer .productImg .smallImg .img{
+        width: 60px;
+        height: 60px;
+    }
+    .itemcontainer .smallcontainer .cardcontainer .card{
+        width: 100%;
+    }
+    .cartcontainer{
+        width: 99vw;
+        height: 98vh;
+        margin: 1vh .5vw;
+    }
+    .cartcontainer .cartdivcontainer{
+        max-height: 79vh;
+    }
+    .cartcontainer .cartdiv .itemname{
+        font-size: 18px;
+    }
+    .cartcontainer .cartdiv .itemname .title{
+        width: 60%;
+    }
+    .cartdivcontainer .cartdiv .qtydiv{
+        width: 90%;
+    }
+    .usercontainer .smalldiv .detailsdiv .userdetailsdiv p{
+        font-size: 18px;
+    }
+    .reviewcontainer{
+        padding: 20px;
+    }
+    .reviewcontainer .formdiv{
+        width: 100%;
+    }
+    .otpdiv .formdiv form{
+        width: 95%;
+    }
+    .notification{
+        width: 95%;
+    }
+    .errordiv h1{
+        font-size: 150px;
+    }
+    .errordiv h3{
+        font-size: 25px;
+    }
+    .errordiv p{
+        font-size: 20px;
+        padding: 0;
+    }
+}
+@media(max-width:450px){
+    .container .card,
+    .container .card{
+        width: 100%;
+    }
+    .sortnav .location{
+        font-size: 18px;
+    }
+    .usercontainer .sidenav{
+        margin-left: -320px;
+    }
+    .cartcheckoutdiv .cartdetailsdiv{
+        overflow: auto;
+    }
+    .cartcheckoutdiv .cartdetailsdiv table{
+        width: 550px;
+    }
+    .cartcheckoutdiv .userdetails p{
+        font-size: 18px;
+    }
+    .productcontainer .productdetails .title p{
+        font-size: 25px;
+    }
+    .productcontainer .productdetails .title .rating {
+        font-size: 20px;
+        color: #EE3D4A;
+    }
+    .productcontainer .productdetails .locdiv i{
+        margin-right: 2px;
+    }
+}
+@media(max-width:370px){
+    .productcontainer .btndiv .btn{
+        width: 120px;
+    }
+}
+@media(max-width:350px){
+    .nav{
+        height: 50px;
+    }
+    .nav nav .title h1{
+        font-size: 28px;
+    }  
+    .nav nav .logindiv{
+        font-size: 20px;
+    }
+    .productcontainer .btndiv .btn{
+        width: 120px;
+    }
+    .cartcontainer .cartdiv .itemimg img{
+        width: 90px;
+    }
+    .cartcontainer .cartdiv .qty input,
+    .cartcontainer .cartdiv .remove{
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+    }
+    .cartcontainer .cartdiv .itemname{
+        font-size: 16px;
+    }
+}
+@media(max-width:300px){
+    .nav nav .title h1{
+        font-size: 25px;
+    }  
+    .nav nav .logindiv{
+        font-size: 18px;
+    }
+}
+@media(max-height:800px){
+    .cartcontainer .cartdivcontainer{
+        max-height: 76vh;
+    }
+}
+@media(max-height:670px){
+    .cartcontainer .cartdivcontainer{
+        max-height: 73vh;
+    }
+}
+@media(max-height:577px){
+    .cartcontainer .cartdivcontainer{
+        max-height: 70vh;
+    }
+}
